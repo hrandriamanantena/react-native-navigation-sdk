@@ -319,10 +319,10 @@ public class NavModule extends ReactContextBaseJavaModule
                 "waypoint", ObjectTranslationUtil.getMapFromWaypoint(arrivalEvent.getWaypoint()));
             map.putBoolean("isFinalDestination", arrivalEvent.isFinalDestination());
 
-            WritableNativeArray params = new WritableNativeArray();
-            params.pushMap(map);
+            // WritableNativeArray params = new WritableNativeArray();
+            // params.pushMap(map);
 
-            sendCommandToReactNative("onArrival", params);
+            sendCommandToReactNative("onArrival", map);
           }
         };
     mNavigator.addArrivalListener(mArrivalListener);
